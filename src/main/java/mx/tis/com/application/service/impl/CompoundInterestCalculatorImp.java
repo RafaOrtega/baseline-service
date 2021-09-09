@@ -1,17 +1,14 @@
-/* 
-* This program is free software: you can redistribute it and/or modify  
-* it under the terms of the GNU General Public License as published by  
-* the Free Software Foundation, version 3.
-*
-* This program is distributed in the hope that it will be useful, but 
-* WITHOUT ANY WARRANTY; without even the implied warranty of 
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU 
-* General Public License for more details.
-*
-* Nombre de archivo: CompoundInterestCalculatorImp.java
-* Autor: raforteg
-* Fecha de creación: 8 sep 2021
-*/
+/*
+ * This program is free software: you can redistribute it and/or modify it under the terms of the
+ * GNU General Public License as published by the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+ * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * Nombre de archivo: CompoundInterestCalculatorImp.java Autor: raforteg Fecha de creación: 8 sep
+ * 2021
+ */
 package mx.tis.com.application.service.impl;
 
 import java.util.ArrayList;
@@ -23,8 +20,7 @@ public class CompoundInterestCalculatorImp implements CompoundInterestCalculator
 
   Double initialBalance;
   Double finalAmount;
-  Double gainPerInvestment;
-  
+
   /** The sum. */
   Double sum = 0.0;
 
@@ -74,25 +70,37 @@ public class CompoundInterestCalculatorImp implements CompoundInterestCalculator
   public boolean validateInput(InitialInvestmentDto input) {
 
     this.setDefaults(input);
-    boolean cumple = true;
 
-    cumple = cumple && (input.getInitialInvestment() >= 1000);
-    cumple = cumple && (input.getYearlyInput() >= 0.0);
-    cumple = cumple && (input.getYearlyInputIncrement() >= 0);
-    cumple = cumple && (input.getInvestmentYears() >= 0.0);
-    cumple = cumple && (input.getInvestmentYield() >= 0.0);
-
-    return cumple;
+    if (input.getInitialInvestment() >= 1000) {
+      if (input.getYearlyInput() >= 0.0) {
+        if (input.getYearlyInputIncrement() >= 0) {
+          if (input.getInvestmentYears() >= 0.0) {
+            if (input.getInvestmentYield() > 0.0) {
+              return true;
+            }
+            return false;
+          }
+          return false;
+        }
+        return false;
+      }
+      return false;
+    }
+    return false;
   }
 
   private void setDefaults(InitialInvestmentDto initialInvestment) {
-    Double yearlyInput = initialInvestment.getYearlyInput();
-    yearlyInput = yearlyInput == null ? 0.0 : yearlyInput;
-    initialInvestment.setYearlyInput(yearlyInput);
 
-    Integer yearlyInputIncrement = initialInvestment.getYearlyInputIncrement();
-    yearlyInputIncrement = yearlyInputIncrement == null ? 0 : yearlyInputIncrement;
-    initialInvestment.setYearlyInputIncrement(yearlyInputIncrement);
+    if (initialInvestment.getYearlyInput() == null) {
+      initialInvestment.setYearlyInput(0.0);
+    } else {
+      initialInvestment.setYearlyInput(initialInvestment.getYearlyInput());
+    }
+    if (initialInvestment.getYearlyInputIncrement() == null) {
+      initialInvestment.setYearlyInputIncrement(0);
+    } else {
+      initialInvestment.setYearlyInputIncrement(initialInvestment.getYearlyInputIncrement());
+    }
   }
 
 }
