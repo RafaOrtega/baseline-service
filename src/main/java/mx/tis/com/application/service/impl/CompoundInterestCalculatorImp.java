@@ -66,6 +66,12 @@ public class CompoundInterestCalculatorImp implements CompoundInterestCalculator
   }
 
 
+  /**
+   * Validate input.
+   *
+   * @param input the input
+   * @return true, if successful
+   */
   @Override
   public boolean validateInput(InitialInvestmentDto input) {
 
