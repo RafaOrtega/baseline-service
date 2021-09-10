@@ -52,10 +52,10 @@ public class ApplicationControllerTest {
     List<InvestmentYieldDto> tableYield = controller.createTableYield(initialInvestment);
     assertEquals(5, tableYield.size());
 
-    /*InvestmentYieldDto firstYear = tableYield.get(0);
+    InvestmentYieldDto firstYear = tableYield.get(0);
     assertEquals(Double.valueOf(5000.00), firstYear.getInitialInvestment());
     assertEquals(Double.valueOf(3000.00), firstYear.getYearlyInput());
     assertEquals(Double.valueOf(1680.00), firstYear.getInvestmentYield());
-    assertEquals(Double.valueOf(9680.00), firstYear.getFinalBalance());*/
+    assertEquals(Double.valueOf(9680.00), firstYear.getFinalBalance());
   }
 }
