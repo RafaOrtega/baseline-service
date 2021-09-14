@@ -12,7 +12,7 @@
 * Autor: raforteg
 * Fecha de creación: 8 sep 2021
 */
-package mx.tis.com.application.dto;
+package com.tis.mx.application.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

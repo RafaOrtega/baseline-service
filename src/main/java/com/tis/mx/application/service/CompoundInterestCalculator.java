@@ -13,11 +13,11 @@
 * Fecha de creación: 8 sep 2021
 */
 
-package mx.tis.com.application.service;
+package com.tis.mx.application.service;
 
 import java.util.List;
-import mx.tis.com.application.dto.InitialInvestmentDto;
-import mx.tis.com.application.dto.InvestmentYieldDto;
+import com.tis.mx.application.dto.InitialInvestmentDto;
+import com.tis.mx.application.dto.InvestmentYieldDto;
 
 /**
  * The Interface CompoundInterestCalculator.
