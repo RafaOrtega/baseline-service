@@ -13,7 +13,7 @@
 * Fecha de creación: 10 sep 2021
 */
 
-package mx.tis.com.infraestructure.exception;
+package com.tis.mx.infraestructure.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

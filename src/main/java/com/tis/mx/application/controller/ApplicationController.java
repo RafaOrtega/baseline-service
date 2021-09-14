@@ -12,16 +12,16 @@
 * Autor: raforteg
 * Fecha de creación: 9 sep 2021
 */
-package mx.tis.com.application.controller;
+package com.tis.mx.application.controller;
 
 import java.util.List;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
-import mx.tis.com.application.dto.InitialInvestmentDto;
-import mx.tis.com.application.dto.InvestmentYieldDto;
-import mx.tis.com.application.service.CompoundInterestCalculator;
+import com.tis.mx.application.dto.InitialInvestmentDto;
+import com.tis.mx.application.dto.InvestmentYieldDto;
+import com.tis.mx.application.service.CompoundInterestCalculator;
 
 
 /**

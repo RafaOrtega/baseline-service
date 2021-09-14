@@ -12,13 +12,13 @@
 * Autor: raforteg
 * Fecha de creación: 10 sep 2021
 */
-package mx.tis.com.infraestructure.exception;
+package com.tis.mx.infraestructure.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import mx.tis.com.application.controller.CalculatorInputException;
+import com.tis.mx.application.controller.CalculatorInputException;
 
 /**
  * The Class GlobalExceptionHandler.

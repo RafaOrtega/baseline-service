@@ -10,15 +10,15 @@
  */
 package com.tis.mx.application.controller;
 
-import mx.tis.com.application.controller.ApplicationController;
-import mx.tis.com.application.dto.InitialInvestmentDto;
-import mx.tis.com.application.dto.InvestmentYieldDto;
-import mx.tis.com.application.service.CompoundInterestCalculator;
-import mx.tis.com.application.service.impl.CompoundInterestCalculatorImp;
 import static org.junit.Assert.assertEquals;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
+import com.tis.mx.application.controller.ApplicationController;
+import com.tis.mx.application.dto.InitialInvestmentDto;
+import com.tis.mx.application.dto.InvestmentYieldDto;
+import com.tis.mx.application.service.CompoundInterestCalculator;
+import com.tis.mx.application.service.impl.CompoundInterestCalculatorImp;
 
 public class ApplicationControllerTest {
 

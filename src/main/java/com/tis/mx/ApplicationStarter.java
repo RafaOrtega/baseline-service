@@ -12,7 +12,7 @@
 * Autor: raforteg
 * Fecha de creación: 10 sep 2021
 */
-package mx.tis.com;
+package com.tis.mx;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

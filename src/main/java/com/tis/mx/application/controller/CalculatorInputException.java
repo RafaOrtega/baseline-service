@@ -12,7 +12,7 @@
 * Autor: raforteg
 * Fecha de creación: 9 sep 2021
 */
-package mx.tis.com.application.controller;
+package com.tis.mx.application.controller;
 
 public class CalculatorInputException extends RuntimeException {
   

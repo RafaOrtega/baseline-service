@@ -13,13 +13,13 @@
 * Fecha de creación: 10 sep 2021
 */
 
-package mx.tis.com.application.service.impl;
+package com.tis.mx.application.service.impl;
 
 import java.util.ArrayList;
 import org.springframework.stereotype.Service;
-import mx.tis.com.application.dto.InitialInvestmentDto;
-import mx.tis.com.application.dto.InvestmentYieldDto;
-import mx.tis.com.application.service.CompoundInterestCalculator;
+import com.tis.mx.application.dto.InitialInvestmentDto;
+import com.tis.mx.application.dto.InvestmentYieldDto;
+import com.tis.mx.application.service.CompoundInterestCalculator;
 
 /**
  * The Class CompoundInterestCalculatorImp.
