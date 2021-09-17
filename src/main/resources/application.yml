@@ -7,3 +7,28 @@ spring:
   cloud:
     config:
       uri: http://localhost:8080
+
+security:
+  basic:
+    enabled: false
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 35
+  command:
+    createRevenueGrid:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1500
+          semaphore:
+            maxConcurrentRequest: 500
+      circuitBreaker: 
+        sleepWindowInMillisecond: 5000

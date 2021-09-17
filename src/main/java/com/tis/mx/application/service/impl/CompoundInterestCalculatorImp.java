@@ -17,6 +17,8 @@ package com.tis.mx.application.service.impl;
 
 import java.util.ArrayList;
 import org.springframework.stereotype.Service;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 import com.tis.mx.application.dto.InitialInvestmentDto;
 import com.tis.mx.application.dto.InvestmentYieldDto;
 import com.tis.mx.application.service.CompoundInterestCalculator;
@@ -43,6 +45,7 @@ public class CompoundInterestCalculatorImp implements CompoundInterestCalculator
    * @return the array list
    */
   @Override
+  @HystrixCommand(commandKey = "createRevenueGrid", fallbackMethod = "fallbackRevenueGrid")
   public ArrayList<InvestmentYieldDto> createRevenueGrid(InitialInvestmentDto initialInvestment) {
     ArrayList<InvestmentYieldDto> investmentYieldDtoArray = new ArrayList<>();
 
@@ -82,7 +85,18 @@ public class CompoundInterestCalculatorImp implements CompoundInterestCalculator
     System.out.println("Monto Final\n" + finalAmount);
     return investmentYieldDtoArray;
   }
-
+  
+  
+/**
+ * Fallback revenue grid.
+ *
+ * @param initialInvestmentDto the initial investment dto
+ * @return the array list
+ */
+public ArrayList<InvestmentYieldDto> fallbackRevenueGrid(InitialInvestmentDto initialInvestmentDto) {
+    
+    return null;
+  }
 
   /**
    * Validate input.
